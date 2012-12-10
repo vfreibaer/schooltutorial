@@ -9,6 +9,15 @@ public class SchooltutorialApplication extends Application {
 	public void init() {
 		Window mainWindow = new Window("Schooltutorial Application");
 		Label label = new Label("VITUS ist der allerbeste");
+		
+		
+		 // Needed because composites are full size
+        mainWindow.getContent().setSizeFull();
+        
+        TabSheetDisabledExample myComposite = new TabSheetDisabledExample();
+        mainWindow.addComponent(myComposite); 
+        
+        
 		mainWindow.addComponent(label);
 		setMainWindow(mainWindow);
 	}
