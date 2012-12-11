@@ -13,7 +13,7 @@
   		<description>
   		Vaadin application class to start</description>
   		<param-name>application</param-name>
-  		<param-value>com.example.schooltutorial.SchooltutorialApplication</param-value>
+  		<param-value>de.vfreibaer.schooltutorial.SchooltutorialApplication</param-value>
   	</init-param>
   	<init-param>
   		<description>
@@ -25,6 +25,7 @@
   <servlet-mapping>
   	<servlet-name>Schooltutorial Application</servlet-name>
   	<url-pattern>/*</url-pattern>
+  	<url-pattern>/VAADIN/*</url-pattern>
   </servlet-mapping>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
