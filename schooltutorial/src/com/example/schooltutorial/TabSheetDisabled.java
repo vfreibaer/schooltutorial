@@ -1,6 +1,5 @@
 package com.example.schooltutorial;
 
-import com.vaadin.terminal.ThemeResource;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.HorizontalLayout;
@@ -11,14 +10,8 @@ import com.vaadin.ui.TabSheet.Tab;
 import com.vaadin.ui.VerticalLayout;
 
 @SuppressWarnings("serial")
-public class TabSheetDisabledExample extends VerticalLayout implements
+public class TabSheetDisabled extends VerticalLayout implements
         TabSheet.SelectedTabChangeListener, Button.ClickListener {
-    private static final ThemeResource icon1 = new ThemeResource(
-            "../sampler/icons/action_save.gif");
-    private static final ThemeResource icon2 = new ThemeResource(
-            "../sampler/icons/comment_yellow.gif");
-    private static final ThemeResource icon3 = new ThemeResource(
-            "../sampler/icons/icon_info.gif");
 
     private TabSheet t;
     private Button toggleEnabled;
@@ -29,13 +22,13 @@ public class TabSheetDisabledExample extends VerticalLayout implements
     @SuppressWarnings("unused")
     private Tab t1, t2, t3;
 
-    public TabSheetDisabledExample() {
+    public TabSheetDisabled() {
         setSpacing(true);
 
         // Tab 1 content
         l1 = new VerticalLayout();
         l1.setMargin(true);
-        l1.addComponent(new Label("There are no previously saved actions."));
+        l1.addComponent(new Label("Tblabla"));
         // Tab 2 content
         l2 = new VerticalLayout();
         l2.setMargin(true);
@@ -46,11 +39,11 @@ public class TabSheetDisabledExample extends VerticalLayout implements
         l3.addComponent(new Label("There are currently no issues."));
 
         t = new TabSheet();
-        t.setHeight("200px");
-        t.setWidth("400px");
-        t1 = t.addTab(l1, "Saved actions", icon1);
-        t2 = t.addTab(l2, "Notes", icon2);
-        t3 = t.addTab(l3, "Issues", icon3);
+        t.setHeight("600px");
+        t.setWidth("800px");
+        t1 = t.addTab(l1, "Saved actions", null);
+        t2 = t.addTab(l2, "Notes", null);
+        t3 = t.addTab(l3, "Issues", null);
         t.addListener(this);
 
         toggleEnabled = new Button("Disable 'Notes' tab");

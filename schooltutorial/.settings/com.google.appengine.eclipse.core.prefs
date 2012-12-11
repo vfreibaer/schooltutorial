@@ -5,3 +5,4 @@ gaeHrdEnabled=true
 gaeIsEclipseDefaultInstPath=true
 googleCloudSqlEnabled=false
 localDevMySqlEnabled=true
+validationExclusions=src/de/vfreibaer/schooltutorial/content/LabelUeberschrift.java
