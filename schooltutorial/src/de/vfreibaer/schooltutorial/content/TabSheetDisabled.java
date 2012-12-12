@@ -1,4 +1,4 @@
-package com.example.schooltutorial;
+package de.vfreibaer.schooltutorial.content;
 
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
@@ -28,7 +28,7 @@ public class TabSheetDisabled extends VerticalLayout implements
         // Tab 1 content
         l1 = new VerticalLayout();
         l1.setMargin(true);
-        l1.addComponent(new Label("Tblabla"));
+        l1.addComponent(new PanelBasicExample());
         // Tab 2 content
         l2 = new VerticalLayout();
         l2.setMargin(true);
@@ -39,11 +39,11 @@ public class TabSheetDisabled extends VerticalLayout implements
         l3.addComponent(new Label("There are currently no issues."));
 
         t = new TabSheet();
-        t.setHeight("600px");
-        t.setWidth("800px");
-        t1 = t.addTab(l1, "Saved actions", null);
-        t2 = t.addTab(l2, "Notes", null);
-        t3 = t.addTab(l3, "Issues", null);
+        t.setHeight("650px");
+        t.setWidth("100%");
+        t1 = t.addTab(l1, "Was das ganze hier soll ???", null);
+        t2 = t.addTab(l2, "Info Board", null);
+        t3 = t.addTab(l3, "Class Room", null);
         t.addListener(this);
 
         toggleEnabled = new Button("Disable 'Notes' tab");

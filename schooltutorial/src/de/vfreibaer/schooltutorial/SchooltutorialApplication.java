@@ -1,17 +1,17 @@
 package de.vfreibaer.schooltutorial;
 
-import com.example.schooltutorial.LinkCurrentWindowExample;
-import com.example.schooltutorial.TabSheetDisabled;
 import com.vaadin.Application;
-import com.vaadin.terminal.ThemeResource;
+import com.vaadin.ui.Alignment;
+import com.vaadin.ui.GridLayout;
 import com.vaadin.ui.Window;
 
 import de.vfreibaer.schooltutorial.content.LabelUeberschrift;
+import de.vfreibaer.schooltutorial.content.PopupViewContentsExample;
+import de.vfreibaer.schooltutorial.content.TabSheetDisabled;
 
 @SuppressWarnings("serial")
 public class SchooltutorialApplication extends Application {
-	
-	
+
 	@Override
 	public void init() {
 		buildMainLayout();
@@ -19,25 +19,58 @@ public class SchooltutorialApplication extends Application {
 
 	private void buildMainLayout() {
 		Window mainWindow = new Window("Schooltutorial Application");
-		mainWindow.setTheme("contacts");
-		 // Needed because composites are full size
-        mainWindow.getContent().setSizeFull();
-        
-        
-        // Content der hinzugefuegt wird 
-        LabelUeberschrift oUeberschrift = new LabelUeberschrift();
-        mainWindow.addComponent(oUeberschrift); 
-        
-        // Content der hinzugefuegt wird 
-        TabSheetDisabled oTabSheet = new TabSheetDisabled();
-        mainWindow.addComponent(oTabSheet); 
-       
-        // Beispiel fuer Links
-        LinkCurrentWindowExample mycomposite2= new LinkCurrentWindowExample();
-        mainWindow.addComponent(mycomposite2); 
-        
-        new ThemeResource("../runo/icons/16/ok.png");
-//		mainWindow.addComponent(label);
+		mainWindow.setTheme("schooltutorials");
+		// Needed because composites are full size
+		mainWindow.getContent().setSizeFull();
+
+		// Create a grid layout
+		final GridLayout grid = new GridLayout(3, 3);
+		grid.setSpacing(true);
+		grid.setWidth("100%");
+		grid.setHeight("100%");
+
+		 // Impressum und Datenschutz Schrott
+		PopupViewContentsExample oImpressum = new PopupViewContentsExample();
+		 grid.addComponent(oImpressum, 2, 2);
+		 grid.setComponentAlignment(oImpressum, Alignment.TOP_RIGHT);
+
+		// Ueberschrift
+		LabelUeberschrift oUeberschrift = new LabelUeberschrift();
+		grid.addComponent(oUeberschrift, 1, 0);
+		grid.setComponentAlignment(oUeberschrift, Alignment.TOP_CENTER);
+
+//		Button bottomleft = new Button("Bottom right");
+//		grid.addComponent(bottomleft, 2, 2);
+//		grid.setComponentAlignment(bottomleft, Alignment.BOTTOM_LEFT);
+//
+//		Button bottomcenter = new Button("Bottom Center");
+//		grid.addComponent(bottomcenter, 1, 2);
+
+
+
+		// Content der hinzugefuegt wird
+		TabSheetDisabled oTabSheet = new TabSheetDisabled();
+		grid.addComponent(oTabSheet, 0, 1, 2, 1);
+		grid.setComponentAlignment(oTabSheet, Alignment.MIDDLE_CENTER);
+
+		// Add the layout to the containing layout.
+		mainWindow.addComponent(grid);
+
+		//
+		// // Content der hinzugefuegt wird
+		// GridLayoutBasicExample oGridLayoutBasicExample = new
+		// GridLayoutBasicExample();
+		// mainWindow.addComponent(oGridLayoutBasicExample);
+		//
+		// // Content der hinzugefuegt wird
+		// TabSheetDisabled oTabSheet = new TabSheetDisabled();
+		// mainWindow.addComponent(oTabSheet);
+		//
+		// // Beispiel fuer Links
+		// LinkCurrentWindowExample mycomposite2= new
+		// LinkCurrentWindowExample();
+		// mainWindow.addComponent(mycomposite2);
+
 		setMainWindow(mainWindow);
 	}
 

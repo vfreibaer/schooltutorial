@@ -13,6 +13,6 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="war/WEB-INF/lib/vaadin-6.8.6.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/vaadin-6.8.6.jar" sourcepath="C:/Users/un4given/.m2/repository/com/vaadin/vaadin/6.8.6/vaadin-6.8.6-sources.jar"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>
