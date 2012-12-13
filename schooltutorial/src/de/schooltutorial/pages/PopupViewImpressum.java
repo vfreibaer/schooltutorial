@@ -1,4 +1,4 @@
-package de.vfreibaer.schooltutorial.content;
+package de.schooltutorial.pages;
 
 import com.vaadin.ui.Alignment;
 import com.vaadin.ui.Component;
@@ -9,9 +9,9 @@ import com.vaadin.ui.TextField;
 import com.vaadin.ui.VerticalLayout;
 
 @SuppressWarnings("serial")
-public class PopupViewContentsExample extends HorizontalLayout {
+public class PopupViewImpressum extends HorizontalLayout {
 
-	public PopupViewContentsExample() {
+	public PopupViewImpressum() {
 
     	// this is a HorizontalLayout
     	

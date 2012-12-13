@@ -1,13 +1,13 @@
-package de.vfreibaer.schooltutorial;
+package de.schooltutorial.app;
 
 import com.vaadin.Application;
 import com.vaadin.ui.Alignment;
 import com.vaadin.ui.GridLayout;
 import com.vaadin.ui.Window;
 
-import de.vfreibaer.schooltutorial.content.LabelUeberschrift;
-import de.vfreibaer.schooltutorial.content.PopupViewContentsExample;
-import de.vfreibaer.schooltutorial.content.TabSheetDisabled;
+import de.schooltutorial.pages.LabelUeberschrift;
+import de.schooltutorial.pages.PopupViewImpressum;
+import de.schooltutorial.pages.TabSheetMenu;
 
 @SuppressWarnings("serial")
 public class SchooltutorialApplication extends Application {
@@ -30,7 +30,7 @@ public class SchooltutorialApplication extends Application {
 		grid.setHeight("100%");
 
 		 // Impressum und Datenschutz Schrott
-		PopupViewContentsExample oImpressum = new PopupViewContentsExample();
+		PopupViewImpressum oImpressum = new PopupViewImpressum();
 		 grid.addComponent(oImpressum, 2, 2);
 		 grid.setComponentAlignment(oImpressum, Alignment.TOP_RIGHT);
 
@@ -49,7 +49,7 @@ public class SchooltutorialApplication extends Application {
 
 
 		// Content der hinzugefuegt wird
-		TabSheetDisabled oTabSheet = new TabSheetDisabled();
+		TabSheetMenu oTabSheet = new TabSheetMenu();
 		grid.addComponent(oTabSheet, 0, 1, 2, 1);
 		grid.setComponentAlignment(oTabSheet, Alignment.MIDDLE_CENTER);
 

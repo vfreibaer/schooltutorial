@@ -1,19 +1,18 @@
-package de.vfreibaer.schooltutorial.content;
+package de.schooltutorial.pages;
 
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Panel;
 import com.vaadin.ui.VerticalLayout;
 
 @SuppressWarnings("serial")
-public class PanelBasicExample extends VerticalLayout
+public class PanelEinleitung extends VerticalLayout
 //implements ClickListener 
 {
 
     private Panel panel;
 
-    public PanelBasicExample() {
+    public PanelEinleitung() {
         setSpacing(true);
-
         // Panel 1 - with caption
         panel = new Panel("Arbeitsvorlage");
         panel.setHeight("560px"); // we want scrollbars
@@ -24,14 +23,6 @@ public class PanelBasicExample extends VerticalLayout
         layout.setSpacing(true); // and spacing between components
         addComponent(panel);
 
-        // Let's add a few rows to provoke scrollbars:
-        for (int i = 0; i < 20; i++) {
-            panel.addComponent(new Label(
-                    "Wir dachten uns wir brauchen Inhalt und ne Einleitung."));
-        }
-        
-        panel.addComponent(new Label(
-                "Was wollen Sie schreiben?."));
         
         panel.addComponent(new Label(
                 "Bevor Sie einen Text schreiben, egal wie wichtig oder wie umfangreich er werden soll, " +
@@ -41,6 +32,16 @@ public class PanelBasicExample extends VerticalLayout
                 "Sie brauchen diese Arbeitsvorlage nicht täglich fürs Schreiben aller Ihrer Texte." +
                 " Sie soll vielmehr Anregungen und Hinweise geben, " +
                 "an was Sie grundsätzlich immer denken sollten – und wenn es vor dem Schreiben nur wenige Sekunden sind."));
+        
+        // Let's add a few rows to provoke scrollbars:
+        for (int i = 0; i < 20; i++) {
+            panel.addComponent(new Label(
+                    "Wir dachten uns wir brauchen Inhalt und ne Einleitung."));
+        }
+        
+        panel.addComponent(new Label(
+                "Was wollen Sie schreiben?."));
+        
 
         // Caption toggle:
 //        Button b = new Button("Toggle caption");
