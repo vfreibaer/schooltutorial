@@ -5,6 +5,7 @@ import com.vaadin.ui.Alignment;
 import com.vaadin.ui.GridLayout;
 import com.vaadin.ui.Window;
 
+import de.schooltutorial.pages.LabelLogin;
 import de.schooltutorial.pages.LabelUeberschrift;
 import de.schooltutorial.pages.PopupViewImpressum;
 import de.schooltutorial.pages.TabSheetMenu;
@@ -25,6 +26,7 @@ public class SchooltutorialApplication extends Application {
 
 		// Create a grid layout
 		final GridLayout grid = new GridLayout(3, 3);
+//			grid.addComponent(ELEMENT , Column, ROW);
 		grid.setSpacing(true);
 		grid.setWidth("100%");
 		grid.setHeight("100%");
@@ -38,6 +40,16 @@ public class SchooltutorialApplication extends Application {
 		LabelUeberschrift oUeberschrift = new LabelUeberschrift();
 		grid.addComponent(oUeberschrift, 1, 0);
 		grid.setComponentAlignment(oUeberschrift, Alignment.TOP_CENTER);
+		
+		// Content der hinzugefuegt wird
+		TabSheetMenu oTabSheet = new TabSheetMenu();
+		grid.addComponent(oTabSheet, 0, 1, 2, 1);
+		grid.setComponentAlignment(oTabSheet, Alignment.MIDDLE_CENTER);
+		
+		// Login
+		LabelLogin oLabelLogin = new LabelLogin(oTabSheet);
+		grid.addComponent(oLabelLogin, 2, 0);
+		grid.setComponentAlignment(oLabelLogin, Alignment.TOP_RIGHT);
 
 //		Button bottomleft = new Button("Bottom right");
 //		grid.addComponent(bottomleft, 2, 2);
@@ -48,10 +60,6 @@ public class SchooltutorialApplication extends Application {
 
 
 
-		// Content der hinzugefuegt wird
-		TabSheetMenu oTabSheet = new TabSheetMenu();
-		grid.addComponent(oTabSheet, 0, 1, 2, 1);
-		grid.setComponentAlignment(oTabSheet, Alignment.MIDDLE_CENTER);
 
 		// Add the layout to the containing layout.
 		mainWindow.addComponent(grid);

@@ -3,7 +3,6 @@ package de.schooltutorial.pages;
 import com.vaadin.demo.sampler.features.embedded.FlashEmbedExample;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
-import com.vaadin.ui.HorizontalLayout;
 import com.vaadin.ui.TabSheet;
 import com.vaadin.ui.TabSheet.SelectedTabChangeEvent;
 import com.vaadin.ui.TabSheet.Tab;
@@ -11,7 +10,7 @@ import com.vaadin.ui.VerticalLayout;
 
 @SuppressWarnings("serial")
 public class TabSheetMenu extends VerticalLayout implements
-        TabSheet.SelectedTabChangeListener, Button.ClickListener {
+        TabSheet.SelectedTabChangeListener, Button.ClickListener,ITabSheetMenu {
 
     private TabSheet oTab;
     private Button toggleEnabled;
@@ -19,6 +18,9 @@ public class TabSheetMenu extends VerticalLayout implements
     private VerticalLayout oLayer1;
     private VerticalLayout oLayer2;
     private VerticalLayout oLayer3;
+    
+    private boolean bLogin = false;
+    
     @SuppressWarnings("unused")
     private Tab oTab1, oTab2, oTab3;
 
@@ -43,7 +45,9 @@ public class TabSheetMenu extends VerticalLayout implements
         oTab.setWidth("100%");
         oTab1 = oTab.addTab(oLayer1, "Was das ganze hier soll ???", null);
         oTab2 = oTab.addTab(oLayer2, "Info Board", null);
+        oTab2.setVisible(bLogin);
         oTab3 = oTab.addTab(oLayer3, "Class Room", null);
+        oTab3.setVisible(bLogin);
         oTab.addListener(this);
 
         toggleEnabled = new Button("Disable 'Notes' tab");
@@ -52,13 +56,13 @@ public class TabSheetMenu extends VerticalLayout implements
         toggleVisible = new Button("Hide 'Issues' tab");
         toggleVisible.addListener(this);
 
-        HorizontalLayout hl = new HorizontalLayout();
-        hl.setSpacing(true);
-        hl.addComponent(toggleEnabled);
-        hl.addComponent(toggleVisible);
+//        HorizontalLayout hl = new HorizontalLayout();
+//        hl.setSpacing(true);
+//        hl.addComponent(toggleEnabled);
+//        hl.addComponent(toggleVisible);
 
         addComponent(oTab);
-        addComponent(hl);
+//        addComponent(hl);
     }
 
     public void selectedTabChange(SelectedTabChangeEvent event) {
@@ -74,13 +78,32 @@ public class TabSheetMenu extends VerticalLayout implements
             toggleEnabled.setCaption((oTab2.isEnabled() ? "Disable" : "Enable")
                     + " 'Notes' tab");
 
-        } else {
-            // toggleVisible clicked
-            oTab3.setVisible(!oTab3.isVisible());
-            toggleVisible.setCaption((oTab3.isVisible() ? "Hide" : "Show")
-                    + " 'Issues' tab");
-
-        }
+        } 
+//        else {
+//            // toggleVisible clicked
+//            oTab3.setVisible(!oTab3.isVisible());
+//            toggleVisible.setCaption((oTab3.isVisible() ? "Hide" : "Show")
+//                    + " 'Issues' tab");
+//
+//        }
+        
+        
+        if (toggleVisible.equals(event.getButton())) 
+        {
+        	oTab2.setVisible(!oTab2.isVisible());
+        	oTab3.setVisible(!oTab3.isVisible());
+		}
+        
         oTab.requestRepaint();
     }
+
+	@Override
+	public void setLogin(boolean a_bLogin) {
+		bLogin = a_bLogin;
+		
+		oTab2.setVisible(bLogin);
+		oTab3.setVisible(bLogin);
+		
+		oTab.requestRepaint();
+	}
 }
