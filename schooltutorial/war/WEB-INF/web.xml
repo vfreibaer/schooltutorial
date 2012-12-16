@@ -8,7 +8,15 @@
   </context-param>
   <servlet>
   	<servlet-name>Schooltutorial Application</servlet-name>
-  	<servlet-class>com.vaadin.terminal.gwt.server.ApplicationServlet</servlet-class>
+  	
+  	<!-- fuer Tomcat -->
+  	<!-- <servlet-class>com.vaadin.terminal.gwt.server.ApplicationServlet</servlet-class> -->
+  	
+  	
+  	<!-- fuer Appengine -->
+  	<servlet-class>com.vaadin.terminal.gwt.server.GAEApplicationServlet</servlet-class> 
+  	
+  	
   	<init-param>
   		<description>
   		Vaadin application class to start</description>
