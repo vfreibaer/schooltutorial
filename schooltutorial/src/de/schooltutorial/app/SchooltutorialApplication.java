@@ -63,6 +63,22 @@ public class SchooltutorialApplication extends Application {
 
 		// Add the layout to the containing layout.
 		mainWindow.addComponent(grid);
+
+		//
+		// // Content der hinzugefuegt wird
+		// GridLayoutBasicExample oGridLayoutBasicExample = new
+		// GridLayoutBasicExample();
+		// mainWindow.addComponent(oGridLayoutBasicExample);
+		//
+		// // Content der hinzugefuegt wird
+		// TabSheetDisabled oTabSheet = new TabSheetDisabled();
+		// mainWindow.addComponent(oTabSheet);
+		//
+		// // Beispiel fuer Links
+		// LinkCurrentWindowExample mycomposite2= new
+		// LinkCurrentWindowExample();
+		// mainWindow.addComponent(mycomposite2);
+
 		setMainWindow(mainWindow);
 	}
 
