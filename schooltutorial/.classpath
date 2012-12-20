@@ -19,5 +19,9 @@
 	<classpathentry kind="lib" path="war/WEB-INF/lib/youtubeplayer-1.1.4.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/swfobject-1.2.1.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/widget-rpc-1.1.5.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/appengine-api-1.0-sdk-1.7.3.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/appengine-api-labs.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/appengine-api-stubs.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/appengine-testing.jar"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>

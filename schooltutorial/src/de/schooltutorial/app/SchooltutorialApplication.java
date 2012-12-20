@@ -5,6 +5,7 @@ import com.vaadin.ui.Alignment;
 import com.vaadin.ui.GridLayout;
 import com.vaadin.ui.Window;
 
+import de.schooltutorial.data.DatenbankAnbindung;
 import de.schooltutorial.pages.LabelLogin;
 import de.schooltutorial.pages.LabelUeberschrift;
 import de.schooltutorial.pages.PopupViewImpressum;
@@ -16,6 +17,7 @@ public class SchooltutorialApplication extends Application {
 	@Override
 	public void init() {
 		buildMainLayout();
+		new DatenbankAnbindung();
 	}
 
 	private void buildMainLayout() {

@@ -10,12 +10,12 @@
   	<servlet-name>Schooltutorial Application</servlet-name>
   	
   	<!-- fuer Tomcat -->
-  	<!-- <servlet-class>com.vaadin.terminal.gwt.server.ApplicationServlet</servlet-class> -->
+  	<servlet-class>com.vaadin.terminal.gwt.server.ApplicationServlet</servlet-class> 
   	
   	
-  	<!-- fuer Appengine -->
+  	<!-- fuer Appengine 
   	<servlet-class>com.vaadin.terminal.gwt.server.GAEApplicationServlet</servlet-class> 
-  	
+  	-->
   	
   	<init-param>
   		<description>
