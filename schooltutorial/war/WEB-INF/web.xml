@@ -9,14 +9,14 @@
   <servlet>
   	<servlet-name>Schooltutorial Application</servlet-name>
   	
-  	<!-- fuer Tomcat -->
-  	<servlet-class>com.vaadin.terminal.gwt.server.ApplicationServlet</servlet-class> 
+  	<!-- fuer Tomcat 
   	
-  	
-  	<!-- fuer Appengine 
-  	<servlet-class>com.vaadin.terminal.gwt.server.GAEApplicationServlet</servlet-class> 
   	-->
+  	<servlet-class>de.schooltutorial.server.SchoolTutorialServlet</servlet-class> 
   	
+  	<!-- fuer Appengine  
+  	<servlet-class>de.schooltutorial.server.GAESchoolTutorialServlet</servlet-class> 
+  	-->
   	<init-param>
   		<description>
   		Vaadin application class to start</description>

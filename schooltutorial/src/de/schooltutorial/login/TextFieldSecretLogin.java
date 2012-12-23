@@ -10,6 +10,7 @@ import com.vaadin.ui.TextField;
 import com.vaadin.ui.VerticalLayout;
 import com.vaadin.ui.Window.Notification;
 
+import de.schooltutorial.data.XeroundDataAccess;
 import de.schooltutorial.pages.ITabSheetMenu;
 
 @SuppressWarnings("serial")
@@ -17,6 +18,7 @@ public class TextFieldSecretLogin extends VerticalLayout implements Content {
 
     private final TextField username;
     private final PasswordField password;
+    private XeroundDataAccess oData;
     
     public TextFieldSecretLogin(final ITabSheetMenu oTabSheet) {
         setSizeUndefined(); // let content 'push' size
@@ -39,7 +41,8 @@ public class TextFieldSecretLogin extends VerticalLayout implements Content {
 //                getWindow().showNotification(
 //                        "User: " + username.getValue() + " Password: "
 //                                + password.getValue());
-               if (username.getValue() .equals(password.getValue()))
+            	
+               if (isMember())
                {
             	   oTabSheet.setLogin(true);
             	   getWindow().showNotification(
@@ -52,17 +55,34 @@ public class TextFieldSecretLogin extends VerticalLayout implements Content {
                            "Login fehlgeschlagen !", Notification.TYPE_WARNING_MESSAGE);
                }
             }
+
         });
         addComponent(loginButton);
         setComponentAlignment(loginButton, Alignment.TOP_RIGHT);
 
     }
+    
+    
+    private boolean isMember() {
+    	get_Database().getResults();
+    	
+    	
+		return false;
+	}
 
 	@Override
 	public String getMinimizedValueAsHTML() {
 		return username.getValue().toString();
 	}
 
+	private XeroundDataAccess get_Database() {
+		if(oData== null)
+		{
+			oData= new XeroundDataAccess();
+		}
+		return oData;
+	}
+	
 	@Override
 	public Component getPopupComponent() {
 		return this;

@@ -47,7 +47,7 @@ public class DatenbankAnbindung {
 
 		try {
 			con = DriverManager
-					.getConnection("jdbc:mysql://instance34453.db.xeround.com:3028/mydb?"
+					.getConnection("jdbc:mysql://instance34453.db.xeround.com:3028/db_schooltutorial?"
 							+ "user=admin&password=schooltutorial");
 
 			// rest of the code . . .
