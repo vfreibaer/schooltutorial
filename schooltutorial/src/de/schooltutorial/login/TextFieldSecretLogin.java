@@ -66,8 +66,8 @@ public class TextFieldSecretLogin extends VerticalLayout implements Content {
     private boolean isMember() {
     	get_Database().getResults();
     	
-    	
-		return false;
+    	// Datenbank noch nicht richtig angeschlossen... deswegen hier default true
+		return true;
 	}
 
 	@Override

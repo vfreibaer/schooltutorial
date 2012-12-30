@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+@SuppressWarnings("serial")
 public class XeroundDataAccess {
 
         public Connection oConnection = null;
@@ -40,18 +41,33 @@ public class XeroundDataAccess {
                 Statement dbStatement;
                 try {
                         dbStatement = oConnection.createStatement();
-                        String queryString = "select * from users";
+                        String queryString = "select UserName from users";
                         ResultSet rs = dbStatement.executeQuery(queryString);
-                        while (rs.next()) {
-                                System.out.println(rs.getString(2) + " , " + rs.getString(3)
-                                                + " , " + rs.getString(4));
-                        }
-                        rs.close();
+//                        while (rs.next()) {
+//                                System.out.println(rs.getString(2)) ;
+//                        }
+//                        rs.close();
+                        
+//                        String Url = "your_url";
+//
+//                        System.out.println( DigestUtils.md5Hex( Url ) );
                 } catch (SQLException e) {
                         shutdown();
                         e.printStackTrace();
                 }
 
+        }
+        
+        public int getRows(ResultSet res){
+            int totalRows = 0;
+            try    {
+                  res.last();
+                  totalRows = res.getRow();
+                  res.beforeFirst();
+                   } catch(Exception ex)  {
+                     return 0;
+                   }
+                  return totalRows ;    
         }
 
         public void insert(String word, String usage, String meaning) {
