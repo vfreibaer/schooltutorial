@@ -23,7 +23,7 @@ public class XeroundDataAccess {
             					.getConnection("jdbc:mysql://instance34453.db.xeround.com:3028/db_schooltutorial?"
             							+ "user=admin&password=schooltutorial");
 
-                        System.out.println("Connected to the database");
+                        System.out.println("Xeround connected to the database");
                         return con;
                 } catch (InstantiationException e) {
                         e.printStackTrace();

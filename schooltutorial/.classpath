@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="var" path="VAADIN_DOWNLOAD/gwt-dependencies/2.3.0/validation-api-1.0.0.GA-sources.jar"/>
-	<classpathentry kind="var" path="VAADIN_DOWNLOAD/gwt-dependencies/2.3.0/validation-api-1.0.0.GA.jar"/>
-	<classpathentry kind="var" path="VAADIN_DOWNLOAD/gwt-user/2.3.0/gwt-user.jar"/>
-	<classpathentry kind="var" path="VAADIN_DOWNLOAD/gwt-dev/2.3.0/gwt-dev.jar"/>
+	<classpathentry exported="true" kind="var" path="VAADIN_DOWNLOAD/gwt-dependencies/2.3.0/validation-api-1.0.0.GA-sources.jar"/>
+	<classpathentry exported="true" kind="var" path="VAADIN_DOWNLOAD/gwt-dependencies/2.3.0/validation-api-1.0.0.GA.jar"/>
+	<classpathentry exported="true" kind="var" path="VAADIN_DOWNLOAD/gwt-user/2.3.0/gwt-user.jar"/>
+	<classpathentry exported="true" kind="var" path="VAADIN_DOWNLOAD/gwt-dev/2.3.0/gwt-dev.jar"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="com.google.appengine.eclipse.core.GAE_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6">
@@ -11,19 +11,18 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
-	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="war/WEB-INF/lib/vaadin-6.8.6.jar" sourcepath="C:/Users/un4given/.m2/repository/com/vaadin/vaadin/6.8.6/vaadin-6.8.6-sources.jar"/>
-	<classpathentry kind="lib" path="war/WEB-INF/lib/simplelayout-0.5.jar"/>
-	<classpathentry kind="lib" path="war/WEB-INF/lib/csstools-0.3.jar"/>
-	<classpathentry kind="lib" path="war/WEB-INF/lib/youtubeplayer-1.1.4.jar"/>
-	<classpathentry kind="lib" path="war/WEB-INF/lib/swfobject-1.2.1.jar"/>
-	<classpathentry kind="lib" path="war/WEB-INF/lib/widget-rpc-1.1.5.jar"/>
-	<classpathentry kind="lib" path="war/WEB-INF/lib/appengine-api-1.0-sdk-1.7.3.jar"/>
-	<classpathentry kind="lib" path="war/WEB-INF/lib/appengine-api-labs.jar"/>
-	<classpathentry kind="lib" path="war/WEB-INF/lib/appengine-api-stubs.jar"/>
-	<classpathentry kind="lib" path="war/WEB-INF/lib/appengine-testing.jar"/>
-	<classpathentry kind="lib" path="war/WEB-INF/lib/mysql-connector-java-5.1.22-bin.jar"/>
-	<classpathentry kind="lib" path="war/WEB-INF/lib/commons-codec-1.7.jar"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/appengine-api-stubs.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/appengine-jsr107cache-1.7.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/appengine-testing.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/commons-codec-1.7.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/csstools-0.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/mysql-connector-java-5.1.22-bin.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/simplelayout-0.5.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/swfobject-1.2.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/vaadin-6.8.6.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/widget-rpc-1.1.5.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/youtubeplayer-1.1.4.jar"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>
